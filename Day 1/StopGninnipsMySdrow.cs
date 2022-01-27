@@ -48,3 +48,14 @@ public class Kata
     }
 
 }
+
+
+/*
+Someone else's decision
+        
+public static string SpinWords(string sentence)
+{
+    return String.Join(" ", sentence.Split(' ').Select(str => str.Length >= 5 ? new string(str.Reverse().ToArray()) : str));
+}
+        
+*/
