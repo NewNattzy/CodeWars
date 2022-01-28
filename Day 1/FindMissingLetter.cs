@@ -16,6 +16,8 @@ namespace CodeWars
 
         static void Main(string[] args)
         {
+            SetAlphabet();
+            
             Console.WriteLine(FindMissingLetter(new[] { 'a', 'b', 'c', 'd', 'f' }));
             Console.ReadKey();
         }
@@ -23,8 +25,6 @@ namespace CodeWars
 
         public static char FindMissingLetter(char[] array)
         {
-            SetAlphabet(ref alphabet);
-
             for (int i = 0; i < array.Length; i++)
                 if (alphabet[i] != char.ToUpper(array[i]))
                     return alphabet[i];
@@ -33,7 +33,7 @@ namespace CodeWars
         }
 
 
-        private static void SetAlphabet(ref List<char> alphabet)
+        private static void SetAlphabet()
         {
             for (int i = 65; i < 91; i++)
                 alphabet.Add((char)i);
