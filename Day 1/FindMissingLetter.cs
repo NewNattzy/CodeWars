@@ -21,8 +21,15 @@ namespace CodeWars
             Console.WriteLine(FindMissingLetter(new[] { 'a', 'b', 'c', 'd', 'f' }));
             Console.ReadKey();
         }
+        
+        
+        private static void SetAlphabet()
+        {
+            for (int i = 65; i < 91; i++)
+                alphabet.Add((char)i);
+        }
 
-
+        
         public static char FindMissingLetter(char[] array)
         {
             for (int i = 0; i < array.Length; i++)
@@ -31,14 +38,7 @@ namespace CodeWars
 
             return '0';
         }
-
-
-        private static void SetAlphabet()
-        {
-            for (int i = 65; i < 91; i++)
-                alphabet.Add((char)i);
-        }
-
+        
     }
 
 }
