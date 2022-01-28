@@ -24,12 +24,12 @@ namespace CodeWars
 
         private static bool CheckIsogram(string str)
         {
-            string result = string.Empty;
+            string temp = string.Empty;
 
             foreach (char c in str.ToLower().Distinct())
-                result += c;
+                temp += c;
             
-            return str.ToLower() == result ? true : false;
+            return str.ToLower() == temp ? true : false;
         }
 
     }
