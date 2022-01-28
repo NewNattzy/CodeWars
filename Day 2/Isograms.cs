@@ -28,11 +28,8 @@ namespace CodeWars
 
             foreach (char c in str.ToLower().Distinct())
                 result += c;
-
-            if (str.ToLower() == result)
-                return true;
-
-            return false;
+            
+            return str.ToLower() == result ? true : false;
         }
 
     }
