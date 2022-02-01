@@ -16,25 +16,21 @@ namespace CodeWars
 
         static void Main(string[] args)
         {
-            Console.WriteLine(Evaporator.evaporator(10, 10, 5));   // 29
-            Console.WriteLine(Evaporator.evaporator(10, 10, 10));  // 22
+            Console.WriteLine(evaporator(10, 10, 5));   // 29
+            Console.WriteLine(evaporator(10, 10, 10));  // 22
 
             Console.ReadLine();
         }
 
-        public static class Evaporator
+        private static int evaporator(double content, double evap_per_day, double threshold)
         {
-            public static int evaporator(double content, double evap_per_day, double threshold)
-            {
-                int days = 0;
-                double temp = content * threshold / 100;
+            int days = 0;
+            double temp = content * threshold / 100;
 
-                for (; content > temp; days++)
-                    content -= content * evap_per_day / 100;
+            for (; content > temp; days++)
+                content -= content * evap_per_day / 100;
 
-                return days;
-            }
-
+            return days;
         }
 
     }
