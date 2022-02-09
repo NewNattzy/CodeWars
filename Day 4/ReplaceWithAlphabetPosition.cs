@@ -28,7 +28,6 @@ namespace CodeWars
             AlphabetPosition("!The sunset sets at twelve o' clock.");
         }
 
-
         public static string AlphabetPosition(string text)
         {
             string result = String.Empty;
@@ -38,7 +37,6 @@ namespace CodeWars
 
             return result.Replace(" 0", "").Trim('0').Trim();
         }
-
 
         private static void SetAlphabet()
         {
